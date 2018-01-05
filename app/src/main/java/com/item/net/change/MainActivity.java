@@ -1,9 +1,11 @@
 package com.item.net.change;
 
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.item.net.change.receiver.MyNetReceiver;
@@ -21,6 +23,12 @@ public class MainActivity extends AppCompatActivity implements MyNetReceiver.Net
         initReceiver();
         event = this;
         textView = findViewById(R.id.tv_net);
+        findViewById(R.id.btn_to_service).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TestActivity.class));
+            }
+        });
     }
 
     private void initReceiver() {

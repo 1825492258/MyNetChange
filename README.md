@@ -64,3 +64,9 @@ NetWorkChange
             textView.setText("当前没有网络连接");
         }
     }
+
+## 服务的使用
+   如下是启动服务和绑定服务的简单例子
+![服务](image/img_one.png)
+![startService](image/img_two.png)
+![bindService](image/img_twos.png)
